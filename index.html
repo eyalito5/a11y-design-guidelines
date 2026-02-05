@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessibility Guidelines for Designers - WCAG 2.2 AA Compliant Design and Development Guide">
+  <title>Intro - Accessibility Guidelines for Designers</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
+          <img src="images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
+        </div>
+        <span class="site-title">Accessibility Guidelines for Designers</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  
+  <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Intro</a></li>
+        <li><a href="public/color-contrast.html">Color & Contrast</a></li>
+        <li><a href="public/typography.html">Typography</a></li>
+        <li><a href="public/structure.html">Structure</a></li>
+        <li><a href="public/forms.html">Forms</a></li>
+        <li><a href="public/images.html">Images</a></li>
+        <li><a href="public/video-audio.html">Video & Audio</a></li>
+        <li><a href="public/animations.html">Animations</a></li>
+        <li><a href="public/navigation-interaction.html">Navigation & Interaction</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+      <h1>Intro</h1>
+      
+      <article class="content-section">
+        <h2>Start small</h2>
+        <p>Accessibility is a large topic. You are not expected to master everything today, not even next year. Start small. Aim for continuous learning, for progress over perfection. Once you are experienced with some aspects, expand your knowledge to new ones.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Usability</h2>
+        <p>While accessibility aims to make services accessible to all, it is not a substitute for usability. A product can technically meet all compliance standards yet still be confusing or frustrating to navigate if the underlying logic is flawed. Ultimately, accessibility cannot fix poor usability; ensure you meet the fundamentals of usability to provide a truly equitable experience.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Responsibility</h2>
+        <p>Accessibility is a shared responsibility that must be woven into every stage of the digital service lifecycle. Developers, product owners, testers, and content creators all play a vital role. However, designers sit at the helm of this process. By making intentional choices, they establish the blueprint for accessibility. Designers can play even a bigger role, e.g. by annotating their design for accessibility and raising issues in early phase. Don't assume something is someone else's responsibility; do what you can.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>AI-nnotations</h2>
+        <p>Use <a href="https://help.figma.com/hc/en-us/articles/20774752502935-Add-measurements-and-annotate-designs" target="_blank" rel="noopener noreferrer">Figma annotation tool</a> to add accessibility annotations. These annotations help developers and testers ensure the implementation is accessible. The annotations also provide important accessibility context to AI agents through <a href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener noreferrer">Figma MCP server</a>.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Handoff</h2>
+        <p>A fully accessible design does not guarantee the accessibility of the actual service. Many accessibility aspects rely on how the code is implemented. Walk through the annotations with developers and testers to ensure the implementation is more accessible.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Requirements</h2>
+        <p>The yellow badges labelled "SC ..." communicate the WCAG Success Criterion (SC) that is/are relevant to each requirement, including the level of conformance. Only levels A and AA are included as they are commonly required by laws.</p>
+        <p>The SC are linked to <a href="https://aaardvarkaccessibility.com/wcag-plain-english/" target="_blank" rel="noopener noreferrer">WCAG in Plain English</a> (by Aaardvark), for more information and examples.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Recommendations</h2>
+        <p>The white badges labelled "Recommendation" means the item is not (yet) covered by WCAG.</p>
+      </article>
+      
+      <article class="content-section">
+        <h2>Comments? Ideas?</h2>
+        <p>Send to <a href="mailto:eyal.eshet@vincit.fi">eyal.eshet@vincit.fi</a></p>
+      </article>
+      
+      <!-- Page Navigation -->
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="public/color-contrast.html" class="page-nav-next">Next: Color & Contrast →</a>
+      </nav>
+    </main>
+  </div>
+  
+  <footer>
+    <p>© 2026 Made with ♥️ to accessibility</p>
+  </footer>
+  
+  <script src="js/navigation.js"></script>
+</body>
+</html>
