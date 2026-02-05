@@ -1,0 +1,12 @@
+{
+  "name": "a11y-design-guidelines",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "playwright": "^1.58.1",
+    "axe-core": "^4.11.1"
+  },
+  "scripts": {
+    "playwright:ci": "node scripts/playwright-ci.js"
+  }
+}

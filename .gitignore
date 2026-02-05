@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Temporary screenshots from local testing
+tmp-screenshots/
+
+# macOS Finder metadata
+.DS_Store
+
+# Local Python HTTP server logs
+/tmp/http-server.log
+
+# Editor directories
+.vscode/
+
+# Ignore Playwright browser downloads
+playwright-report/
