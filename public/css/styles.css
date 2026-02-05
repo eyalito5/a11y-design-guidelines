@@ -102,19 +102,25 @@ body {
 }
 
 /* Skip to main content link for accessibility */
-.skip-link {
+#skip-to-content a{
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 0;
-  background-color: var(--accent-blue);
-  color: white;
+  background-color: var(--accent-yellow);
+  color: var(--text-primary);
   padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
   text-decoration: none;
-  z-index: 100;
+  z-index: calc(var(--z-nav) + 100);
 }
 
-.skip-link:focus {
-  top: 0;
+#skip-to-content a:focus {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;  
+  transition: top 0.1s ease-in;
 }
 
 /* ===================================
