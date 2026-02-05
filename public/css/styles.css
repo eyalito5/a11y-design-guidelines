@@ -120,7 +120,7 @@ body {
   left: var(--spacing-sm);
   outline: 2px solid var(--accent-blue);
   outline-offset: 2px;  
-  transition: top 0.1s ease-in;
+transition: top 0.1s ease-in;   
 }
 
 /* ===================================
