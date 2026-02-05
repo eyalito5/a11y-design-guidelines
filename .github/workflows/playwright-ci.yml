@@ -1,0 +1,59 @@
+name: Playwright CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  playwright:
+    name: Playwright screenshots & accessibility
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Start static server (public/)
+        run: |
+          pushd public
+          python3 -m http.server 8000 &
+          popd
+
+      - name: Wait for server
+        run: |
+          for i in {1..15}; do
+            if curl -sSf http://localhost:8000/index.html >/dev/null 2>&1; then
+              echo "server up"; break
+            fi
+            sleep 1
+          done
+
+      - name: Run Playwright CI script
+        run: npm run playwright:ci
+
+      - name: Run Pa11y scans (WCAG2AA)
+        run: |
+          mkdir -p artifacts/pa11y
+          for p in index color-contrast typography structure forms images video-audio animations navigation-interaction; do
+            npx pa11y http://localhost:8000/$p.html --standard WCAG2AA --reporter html > artifacts/pa11y/$p.html || true
+            npx pa11y http://localhost:8000/$p.html --standard WCAG2AA --reporter json > artifacts/pa11y/$p.json || true
+          done
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: artifacts
