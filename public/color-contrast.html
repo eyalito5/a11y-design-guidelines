@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Color & Contrast guidelines for accessible design - WCAG 2.2 AA">
+  <title>Color & Contrast - Accessibility Guidelines for Designers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
+          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
+        </div>
+        <span class="site-title">Accessibility Guidelines for Designers</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  
+  <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+
+      <ul class="nav-list">
+        <li><a href="index.html">Intro</a></li>
+        <li><a href="color-contrast.html" aria-current="page">Color & Contrast</a></li>
+        <li><a href="typography.html">Typography</a></li>
+        <li><a href="structure.html">Structure</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video-audio.html">Video & Audio</a></li>
+        <li><a href="animations.html">Animations</a></li>
+        <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+      <h1>Color & Contrast</h1>
+      
+      <article class="content-section">
+        <h2>Use of color</h2>
+        <p>Color must not be the only way to convey information. Always provide an additional visual cue, like icon, text label, underline, shape, or pattern (e.g. striped, solid).</p>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><strong>Color blindness simulator:</strong>
+            <ul>
+              <li><a href="https://michelf.ca/projects/sim-daltonism/" target="_blank" rel="noopener noreferrer">Sim Daltonism</a> (mac, iOS)</li>
+              <li><a href="https://www.figma.com/community/plugin/733343906244951586/color-blind" target="_blank" rel="noopener noreferrer">Color Blind</a> (Figma plugin)</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-1-use-of-color/" target="_blank" rel="noopener noreferrer">SC 1.4.1</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Text contrast</h2>
+        <p>The contrast of text against its background must be at least:</p>
+        <ul>
+          <li><strong>Normal text - 4.5:1</strong></li>
+          <li><strong>Large text</strong> (over 24px, or bold and over 19px) - <strong>3:1</strong></li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a></li>
+          <li><a href="https://contrast-grid.eightshapes.com/" target="_blank" rel="noopener noreferrer">EightShapes Contrast Grid</a></li>
+          <li><a href="https://www.youtube.com/watch?v=5uvU1-2xq3U&t=5s" target="_blank" rel="noopener noreferrer">Checking color contrast in Figma</a> (YouTube, 1:28min)</li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-3-contrast-minimum/" target="_blank" rel="noopener noreferrer">SC 1.4.3</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Non-text contrast</h2>
+        <p>Interactive controls (e.g. buttons, form fields) and graphics that convey meaning (e.g. icons, charts, graph lines) must have a contrast ratio of at least <strong>3:1</strong> against adjacent colors.</p>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-11-non-text-contrast/" target="_blank" rel="noopener noreferrer">SC 1.4.11</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <!-- Page Navigation -->
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="index.html" class="page-nav-prev">← Previous: Intro</a>
+        <a href="typography.html" class="page-nav-next">Next: Typography →</a>
+      </nav>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2026 Accessibility Guidelines for Designers. Powered by Vincit.</p>
+  </footer>
+  
+  <script src="../js/navigation.js"></script>
+</body>
+</html>

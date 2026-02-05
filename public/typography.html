@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Typography guidelines for accessible design - WCAG 2.2 AA">
+  <title>Typography - Accessibility Guidelines for Designers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
+          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
+        </div>
+        <span class="site-title">Accessibility Guidelines for Designers</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  
+  <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+
+      <ul class="nav-list">
+        <li><a href="index.html">Intro</a></li>
+        <li><a href="color-contrast.html">Color & Contrast</a></li>
+        <li><a href="typography.html" aria-current="page">Typography</a></li>
+        <li><a href="structure.html">Structure</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video-audio.html">Video & Audio</a></li>
+        <li><a href="animations.html">Animations</a></li>
+        <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+      <h1>Typography</h1>
+      
+      <article class="content-section">
+        <h2>Legible typeface</h2>
+        <ul>
+          <li>There is no one typeface that is optimal to all people</li>
+          <li>Consider a typeface that emphasizes clarity and legibility. Look out for:
+            <ul>
+              <li>less character ambiguity, e.g.
+                <ul>
+                  <li><strong>Il1</strong> (upper case i, lower case L, and the number 1)</li>
+                  <li><strong>O0</strong> (upper case O and the digit 0)</li>
+                </ul>
+              </li>
+              <li>mirroring letters, e.g. <strong>db, qp</strong></li>
+              <li>letter spacing is adequate, not too tight</li>
+              <li>typeface that scale well to different sizes</li>
+              <li>typeface that is appropriate to the audience and brand</li>
+            </ul>
+          </li>
+          <li>Use limited number of typefaces, fonts, and font variations</li>
+        </ul>
+        <p><strong>Examples of more accessible typefaces:</strong></p>
+        <ul>
+          <li><strong>Serif:</strong> Times New Roman, Georgia</li>
+          <li><strong>Sans-serif:</strong> Tahoma, Verdana, Helvetica, Roboto, Calibri, Arial, Atkinson Hyperlegible, Open Sans</li>
+          <li><strong>Slab-serif:</strong> Arvo, Museo Slab, Rockwell</li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://webaim.org/techniques/fonts/" target="_blank" rel="noopener noreferrer">Accessibility of typefaces</a></li>
+          <li><a href="https://www.fontpair.co/" target="_blank" rel="noopener noreferrer">Site to help pair different typefaces</a></li>
+        </ul>
+        <div class="wcag-badge recommendation">
+          <span>Recommendation</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Font size</h2>
+        <ul>
+          <li>Primary body text - at least <strong>16px</strong> (1rem in relative units)</li>
+          <li>Secondary text (e.g. captions, footnotes) - at least <strong>12px</strong></li>
+          <li>Use relative font size units, e.g. em, rem, percents</li>
+        </ul>
+        <div class="wcag-badge recommendation">
+          <span>Recommendation</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Line length</h2>
+        <p>The optimal line length for body text is <strong>50–75 characters</strong></p>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://baymard.com/blog/line-length-readability" target="_blank" rel="noopener noreferrer">The optimal line length</a></li>
+        </ul>
+        <div class="wcag-badge recommendation">
+          <span>Recommendation</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Text alignment</h2>
+        <p>Left align body text for LTR languages, right for RTL.</p>
+        <p>This provides the eye a constant starting point for each line, making text easier to read.</p>
+        <div class="wcag-badge recommendation">
+          <span>Recommendation</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Resize text</h2>
+        <ul>
+          <li>Text remains readable and usable when zoomed to <strong>200%</strong></li>
+          <li>No loss of clarity or functionality</li>
+          <li>Specify font and container sizes using relative units such as em, rem, percents</li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-4-resize-text/" target="_blank" rel="noopener noreferrer">SC 1.4.4</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Text spacing</h2>
+        <p>Text remains readable and usable when spacing is changed using custom styles to at least:</p>
+        <ul>
+          <li>1.5 times line height</li>
+          <li>2 times spacing after paragraphs</li>
+          <li>0.12 times letter spacing</li>
+          <li>0.16 times word spacing</li>
+        </ul>
+        <p>without content being hidden, cut off, or broken.</p>
+        <p>Specify font and container sizes using relative units such as em, rem, percents</p>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-12-text-spacing/" target="_blank" rel="noopener noreferrer">SC 1.4.12</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Images of text</h2>
+        <p>Text must be actual text, not images of text, unless a specific visual presentation is absolutely necessary (e.g. logo)</p>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-5-images-of-text/" target="_blank" rel="noopener noreferrer">SC 1.4.5</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <!-- Page Navigation -->
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="color-contrast.html" class="page-nav-prev">← Previous: Color & Contrast</a>
+        <a href="structure.html" class="page-nav-next">Next: Structure →</a>
+      </nav>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2026 Accessibility Guidelines for Designers. Powered by Vincit.</p>
+  </footer>
+  
+  <script src="../js/navigation.js"></script>
+</body>
+</html>

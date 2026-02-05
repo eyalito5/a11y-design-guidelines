@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page Structure guidelines for accessible design - WCAG 2.2 AA">
+  <title>Structure - Accessibility Guidelines for Designers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
+          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
+        </div>
+        <span class="site-title">Accessibility Guidelines for Designers</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  
+  <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+
+      <ul class="nav-list">
+        <li><a href="index.html">Intro</a></li>
+        <li><a href="color-contrast.html">Color & Contrast</a></li>
+        <li><a href="typography.html">Typography</a></li>
+        <li><a href="structure.html" aria-current="page">Structure</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="video-audio.html">Video & Audio</a></li>
+        <li><a href="animations.html">Animations</a></li>
+        <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+      <h1>Structure</h1>
+      
+      <article class="content-section">
+        <h2>Page title</h2>
+        <ul>
+          <li>Ensure each page has a descriptive title that reflects its topic or purpose</li>
+          <li>Ensure the title is unique and make sense on its own</li>
+          <li>Start the title by stating what the page is about, followed by the site name.
+            <ul>
+              <li>E.g., "Designing for Neurodiversity - Smashing Magazine"</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-2-page-titled/" target="_blank" rel="noopener noreferrer">SC 2.4.2</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Headings</h2>
+        <ul>
+          <li>Use headings to group related content</li>
+          <li>Ensure headings clearly describe their content</li>
+          <li>Ensure all content fits into a logical heading structure
+            <ul>
+              <li>Add main heading (h1) to each page or view, that communicate its main purpose or topic</li>
+              <li>Organize sub-headings hierarchically by level h1→h2→h3</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Annotations:</strong></p>
+        <ul>
+          <li>Annotate headings with the appropriate level, e.g. &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank" rel="noopener noreferrer">W3 guide on headings</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-1-info-and-relationships/" target="_blank" rel="noopener noreferrer">SC 1.3.1</a>
+          <span>Level A</span>
+        </div>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-6-headings-and-labels/" target="_blank" rel="noopener noreferrer">SC 2.4.6</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Landmark regions</h2>
+        <ul>
+          <li>Each page should have at least one region for main content</li>
+          <li>Most pages also have regions for header, navigation, and footer</li>
+        </ul>
+        <p><strong>Annotations:</strong></p>
+        <ul>
+          <li>Annotate landmark regions, e.g. &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</li>
+          <li>If a page has multiple navigation regions, each one needs a unique and descriptive label, e.g.
+            <ul>
+              <li>&lt;nav aria-label="Main"&gt;</li>
+              <li>&lt;nav aria-label="[section name]"&gt;</li>
+            </ul>
+          </li>
+          <li>Landmark regions are commonly similar on all pages, so need to be annotated once, e.g. front page</li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://www.w3.org/WAI/tutorials/page-structure/regions/" target="_blank" rel="noopener noreferrer">W3 guide on landmark regions</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-1-info-and-relationships/" target="_blank" rel="noopener noreferrer">SC 1.3.1</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Tables</h2>
+        <ul>
+          <li>Ensure tables have a descriptive title (caption)</li>
+          <li>Consider responsive design - how the table will look and function on smaller screens</li>
+        </ul>
+        <p><strong>Annotations:</strong></p>
+        <ul>
+          <li>Annotate table headers (column, rows), especially for irregular tables
+            <ul>
+              <li>Column header using &lt;th scope="col"&gt;</li>
+              <li>Row header using &lt;th scope="row&gt;</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener noreferrer">W3 guide on tables</a></li>
+          <li><a href="https://www.smashingmagazine.com/2022/12/accessible-front-end-patterns-responsive-tables-part1/" target="_blank" rel="noopener noreferrer">Accessible patterns for responsive tables</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-1-info-and-relationships/" target="_blank" rel="noopener noreferrer">SC 1.3.1</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Lists</h2>
+        <ul>
+          <li>Use lists for grouping a collection of related items</li>
+        </ul>
+        <p><strong>Annotations:</strong></p>
+        <ul>
+          <li>Annotate using the proper list type:
+            <ul>
+              <li>unordered &lt;ul&gt;</li>
+              <li>ordered &lt;ol&gt;</li>
+              <li>description (mainly for metadata) &lt;dl&gt;</li>
+            </ul>
+          </li>
+          <li>If the list doesn't have a bullet or number, annotate it as unordered list &lt;ul&gt;</li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://www.w3.org/WAI/tutorials/page-structure/content/#lists" target="_blank" rel="noopener noreferrer">W3 guide on lists</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-1-info-and-relationships/" target="_blank" rel="noopener noreferrer">SC 1.3.1</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Grouped content</h2>
+        <ul>
+          <li>Ensure that each group of content includes a heading</li>
+        </ul>
+        <p><strong>Annotations:</strong></p>
+        <ul>
+          <li>Annotate visually grouped content as follows:
+            <ul>
+              <li>&lt;article&gt; - e.g. blog entry, news article, product card</li>
+              <li>&lt;section&gt; - any generic section that doesn't have more specific semantic element, e.g. content section</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article" target="_blank" rel="noopener noreferrer">The article element</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section" target="_blank" rel="noopener noreferrer">The section element</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-1-info-and-relationships/" target="_blank" rel="noopener noreferrer">SC 1.3.1</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Reading order</h2>
+        <ul>
+          <li>Ensure content follows a logical and meaningful order</li>
+          <li>Add Figma annotations for pieces of content that the order may not be clear to developers, e.g:
+            <ul>
+              <li>custom numbered lists</li>
+              <li>form fields</li>
+              <li>multi-column and multi-section content</li>
+              <li>main content and sidebars</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-2-meaningful-sequence/" target="_blank" rel="noopener noreferrer">Guidelines and examples on reading order</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-3-2-meaningful-sequence/" target="_blank" rel="noopener noreferrer">SC 1.3.2</a>
+          <span>Level A</span>
+        </div>
+      </article>
+      
+      <article class="content-section">
+        <h2>Status updates</h2>
+        <p>Add Figma annotations to status messages that dynamically appear or updated on screen.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+          <li>success and error messages</li>
+          <li>loading progress updates</li>
+          <li>shopping cart notifications</li>
+          <li>new chat messages</li>
+          <li>data filtering updates</li>
+        </ul>
+        <p>Status messages have to be properly implemented to support accessibility for assistive technologies.</p>
+        <p><strong>Additional resources:</strong></p>
+        <ul>
+          <li><a href="https://www.boia.org/blog/what-are-aria-live-regions" target="_blank" rel="noopener noreferrer">Guidelines on ARIA live regions for status updates</a></li>
+        </ul>
+        <div class="wcag-badge">
+          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/4-1-3-status-messages/" target="_blank" rel="noopener noreferrer">SC 4.1.3</a>
+          <span>Level AA</span>
+        </div>
+      </article>
+      
+      <!-- Page Navigation -->
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="typography.html" class="page-nav-prev">← Previous: Typography</a>
+        <a href="forms.html" class="page-nav-next">Next: Forms →</a>
+      </nav>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2026 Accessibility Guidelines for Designers. Powered by Vincit.</p>
+  </footer>
+  
+  <script src="../js/navigation.js"></script>
+</body>
+</html>
