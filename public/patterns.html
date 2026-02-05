@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Animation accessibility guidelines - WCAG 2.2 AA">
-  <title>Animations - Accessibility Guidelines for Designers</title>
+  <meta name="description" content="Page Structure guidelines for accessible design - WCAG 2.2 AA">
+  <title>Patterns to avoid - Accessibility Guidelines for Designers</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -13,6 +13,10 @@
     <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 <body>
   <div id="skip-to-content">
@@ -33,6 +37,7 @@
   </header>
   
   <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
     <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
 
       <ul class="nav-list">
@@ -43,60 +48,25 @@
         <li><a href="forms.html">Forms</a></li>
         <li><a href="images.html">Images</a></li>
         <li><a href="video-audio.html">Video & Audio</a></li>
-        <li><a href="animations.html" aria-current="page">Animations</a></li>
+        <li><a href="animations.html">Animations</a></li>
         <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
-        <li><a href="patterns.html">Patterns to avoid</a></li>
+        <li><a href="patterns.html" aria-current="page">Patterns to avoid</a></li>
       </ul>
     </nav>
     
+    <!-- Main Content -->
     <main id="main-content" class="main-content">
-      <h1>Animations</h1>
+      <h1>Patterns to avoid</h1>
       
       <article class="content-section">
-        <h2>Animation duration</h2>
-        <ul>
-          <li>Avoid animations that last less than 3 seconds</li>
-          <li>Longer animations allow people more time to perceive the motion and understand what's happening</li>
-        </ul>
-        <div class="wcag-badge recommendation">
-          <span>Recommendation</span>
-        </div>
+        <h2>TBD</h2>
+        <p>Content coming soon...</p>
       </article>
       
-      <article class="content-section">
-        <h2>Motion and flashing</h2>
-        <ul>
-          <li>Avoid animations that flash more than 3 times per second</li>
-          <li>Ensure animations do not cause seizures in people with photosensitive epilepsy</li>
-          <li>Provide an option to disable animations and motion effects</li>
-          <li>Respect the <code>prefers-reduced-motion</code> media query for users who prefer reduced motion</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions" target="_blank" rel="noopener noreferrer">W3 guide on animation</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-3-1-three-flashes-or-below-threshold/" target="_blank" rel="noopener noreferrer">SC 2.3.1</a>
-          <span>Level A</span>
-        </div>
-      </article>
       
-      <article class="content-section">
-        <h2>Parallax and autoplay</h2>
-        <ul>
-          <li>Use parallax effects sparingly and ensure they don't cause motion sickness</li>
-          <li>Do not autoplay videos or animations on page load</li>
-          <li>Provide user control over media playback</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-2-2-pause-stop-hide/" target="_blank" rel="noopener noreferrer">SC 2.2.2</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
+      <!-- Page Navigation -->
       <nav class="page-nav" aria-label="Page navigation">
-        <a href="video-audio.html" class="page-nav-prev">← Previous: Video & Audio</a>
-        <a href="navigation-interaction.html" class="page-nav-next">Next: Navigation & Interaction →</a>
+        <a href="navigation-interaction.html" class="page-nav-prev">← Previous: Navigation & Interaction</a>
       </nav>
     </main>
   </div>
