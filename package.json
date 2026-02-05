@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "playwright": "^1.58.1",
-    "axe-core": "^4.12.2"
+    "axe-core": "^4.11.1"
   },
   "scripts": {
     "playwright:ci": "node scripts/playwright-ci.js"
