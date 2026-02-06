@@ -1,257 +1,510 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Form accessibility guidelines - WCAG 2.2 AA">
-  <title>Forms - Accessibility Guidelines for Designers</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Form accessibility guidelines - WCAG 2.2 AA"
+    />
+    <title>Forms - Accessibility Guidelines for Designers</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>
-<body>
-  <div id="skip-to-content">
-    <a href="#main-content">Skip to main content</a>
-  </div>
-  
-  <header>
-    <div class="header-container">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
-          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
-        </div>
-        <span class="site-title">Accessibility Guidelines for Designers</span>
-      </div>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="skip-to-content">
+      <a href="#main-content">Skip to main content</a>
     </div>
-  </header>
-  
-  <div class="layout-wrapper">
-    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
 
-      <ul class="nav-list">
-        <li><a href="../index.html">Intro</a></li>
-        <li><a href="color-contrast.html">Color & Contrast</a></li>
-        <li><a href="typography.html">Typography</a></li>
-        <li><a href="structure.html">Structure</a></li>
-        <li><a href="forms.html" aria-current="page">Forms</a></li>
-        <li><a href="images.html">Images</a></li>
-        <li><a href="video-audio.html">Video & Audio</a></li>
-        <li><a href="animations.html">Animations</a></li>
-        <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
-        <li><a href="patterns.html">Patterns to avoid</a></li>
-      </ul>
-    </nav>
-    
-    <main id="main-content" class="main-content">
-      <h1>Forms</h1>
-      
-      <article class="content-section">
-        <h2>Labels</h2>
-        <ul>
-          <li>Ensure every form control - e.g. text field, dropdown, checkbox - have a label</li>
-          <li>Ensure the label is descriptive</li>
-          <li>Ensure the label is in close immediate proximity to the control, preferably above the control</li>
-          <li>Ensure related form controls - e.g. radio button group, related text fields - have a group label</li>
-        </ul>
-        <p><strong>Annotations:</strong></p>
-        <ul>
-          <li>Annotate labels using &lt;label&gt;</li>
-          <li>Annotate a group of related form controls using &lt;fieldset&gt;</li>
-          <li>Annotate group label using &lt;legend&gt;</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/tutorials/forms/labels/" target="_blank" rel="noopener noreferrer">W3 guidelines on labelling controls</a></li>
-          <li><a href="https://www.w3.org/WAI/tutorials/forms/grouping/" target="_blank" rel="noopener noreferrer">W3 guidelines on grouping controls</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-6-headings-and-labels/" target="_blank" rel="noopener noreferrer">SC 2.4.6</a>
-          <span>Level AA</span>
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <div class="brand-logo">
+            <img
+              src="../images/vincit-mark.png"
+              class="site-logo site-logo--mark"
+              alt="Vincit mark"
+            />
+            <img
+              src="../images/vincit-logo.svg"
+              class="site-logo site-logo--logo"
+              alt="Vincit logo"
+            />
+          </div>
+          <span class="site-title">Accessibility Guidelines for Designers</span>
         </div>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-2-labels-or-instructions/" target="_blank" rel="noopener noreferrer">SC 3.3.2</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Instructions</h2>
-        <ul>
-          <li>Ensure form control have instructions in case they require specific format or other instructions</li>
-          <li>Ensure the instruction is clear and concise</li>
-          <li>Ensure the instructions are in close immediate proximity to the control, logically above the control as part of the label or below the label</li>
-          <li>Ensure required fields are clearly marked as required, e.g. with * asterisk
-            <ul>
-              <li>alternatively, can mark optional fields using '(optional)' in the label</li>
-              <li>in any case, provide instructions in the beginning of the form, e.g. 'Fields marked with * asterisk are required'</li>
-            </ul>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="layout-wrapper">
+      <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Intro</a></li>
+          <li><a href="color-contrast.html">Color & Contrast</a></li>
+          <li><a href="typography.html">Typography</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="forms.html" aria-current="page">Forms</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li><a href="video-audio.html">Video & Audio</a></li>
+          <li><a href="animations.html">Animations</a></li>
+          <li>
+            <a href="navigation-interaction.html">Navigation & Interaction</a>
           </li>
+          <li><a href="patterns.html">Patterns to avoid</a></li>
         </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/tutorials/forms/instructions/" target="_blank" rel="noopener noreferrer">W3 guidelines on form instructions</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-2-labels-or-instructions/" target="_blank" rel="noopener noreferrer">SC 3.3.2</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Redundant data entry</h2>
-        <p>Ensure people don't have to enter the same information twice in the same session, unless it is essential for security</p>
-        <p><strong>Example of solutions:</strong></p>
-        <ul>
-          <li>Data can be auto-populated or available for selection</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-7-redundant-entry/" target="_blank" rel="noopener noreferrer">SC 3.3.7</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Error prevention</h2>
-        <p>Allow people to confirm, correct, or reverse important submissions. An important action is an online task that could have serious consequences.</p>
-        <p><strong>Examples:</strong></p>
-        <ul>
-          <li>legal contracts</li>
-          <li>financial transactions</li>
-          <li>user account</li>
-        </ul>
-        <p><strong>Examples of solutions:</strong></p>
-        <ul>
-          <li>allow to review summary before submission</li>
-          <li>add a required checkbox to confirm submission</li>
-          <li>show confirmation popup before submission</li>
-          <li>give time to cancel or edit after submission</li>
-          <li>allow data recovery after submission</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-4-error-prevention-legal-financial-data/" target="_blank" rel="noopener noreferrer">SC 3.3.4</a>
-          <span>Level AA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Error messages</h2>
-        <ul>
-          <li>Show error messages after form validation</li>
-          <li>Clearly identify the problem in the error message, e.g. which form field has the error and what is the problem</li>
-          <li>Don't use color alone to identify the erroneous fields. Add graphics and optionally the error message</li>
-          <li>If you show error messages next to the erroneous field, <a href="https://adrianroselli.com/2017/01/avoid-messages-under-fields.html" target="_blank" rel="noopener noreferrer">avoid messages under the field</a></li>
-          <li>If there are multiple errors, list them all above the form</li>
-          <li><a href="https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/" target="_blank" rel="noopener noreferrer">Avoid live field validation during typing</a>, unless necessary</li>
-        </ul>
-        <p><strong>Suggested solutions:</strong></p>
-        <ul>
-          <li><a href="https://design-system.service.gov.uk/components/error-summary/" target="_blank" rel="noopener noreferrer">Error summary pattern</a> (gov.uk)</li>
-          <li><a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">User notification approaches</a> (W3)</li>
-        </ul>
-        <div class="wcag-badge">
-          <span>SC 3.3.1</span>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Error suggestions</h2>
-        <p>Error messages should include concise and helpful suggestion on how to correct the issue</p>
-        <ul>
-          <li>including empty required fields</li>
-        </ul>
-        <p><strong>Bad and good examples:</strong></p>
-        <ul>
-          <li>'Invalid field' vs 'Enter address'</li>
-          <li>'Invalid format' vs 'Enter a valid 5-digit zip code'</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-3-error-suggestion/" target="_blank" rel="noopener noreferrer">SC 3.3.3</a>
-          <span>Level AA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Session timeout</h2>
-        <ul>
-          <li>Avoid setting time limits to form completion</li>
-          <li>If time limits are used, allow people to turn them off, adjust them, or extend them</li>
-        </ul>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>Services where a time limit is essential for the activity, e.g. live events, auctions, exams</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-2-1-timing-adjustable/" target="_blank" rel="noopener noreferrer">SC 2.2.1</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Authentication</h2>
-        <ul>
-          <li>Ensure the login to the service do not rely on memory alone (e.g. memorizing password) or other cognitive challenge (e.g. solving a puzzle).</li>
-          <li>Allow people to always see what they type, e.g. an option to show/hide password</li>
-        </ul>
-        <p><strong>Example of solutions:</strong></p>
-        <ul>
-          <li>login fields have the autocomplete attribute that allow password managers to save and repopulate the data</li>
-          <li>allow copy-paste credentials from third-party password managers</li>
-          <li>allow two-factor authentication, e.g. email verification, authenticator code</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-8-accessible-authentication-minimum/" target="_blank" rel="noopener noreferrer">SC 3.3.8</a>
-          <span>Level AA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Color contrast</h2>
-        <ul>
-          <li>Ensure form controls - e.g. input field boundaries - have a contrast ratio of at least <strong>3:1</strong> against adjacent colors</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-11-non-text-contrast/" target="_blank" rel="noopener noreferrer">SC 1.4.11</a>
-          <span>Level AA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Submit button</h2>
-        <ul>
-          <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" target="_blank" rel="noopener noreferrer">Avoid disabling the submit button</a></li>
-        </ul>
-        <div class="wcag-badge recommendation">
-          <span>Recommendation</span>
-        </div>
-      </article>
-      
-      <nav class="page-nav" aria-label="Page navigation">
-        <a href="structure.html" class="page-nav-prev">← Previous: Structure</a>
-        <a href="images.html" class="page-nav-next">Next: Images →</a>
       </nav>
-    </main>
-  </div>
-  
-  <footer>
-    <p>© 2026 Made with ♥️ to accessibility</p>
-  </footer>
-  
-  <script src="../js/navigation.js"></script>
-</body>
+
+      <main id="main-content" class="main-content">
+        <h1>Forms</h1>
+
+        <article class="content-section">
+          <h2>Labels</h2>
+          <ul>
+            <li>
+              Ensure every form control - e.g. text field, dropdown, checkbox -
+              have a label
+            </li>
+            <li>Ensure the label is descriptive</li>
+            <li>
+              Ensure the label is in close immediate proximity to the control,
+              preferably above the control
+            </li>
+            <li>
+              Ensure related form controls - e.g. radio button group, related
+              text fields - have a group label
+            </li>
+          </ul>
+          <p><strong>Annotations:</strong></p>
+          <ul>
+            <li>Annotate labels using &lt;label&gt;</li>
+            <li>
+              Annotate a group of related form controls using &lt;fieldset&gt;
+            </li>
+            <li>Annotate group label using &lt;legend&gt;</li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/tutorials/forms/labels/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guidelines on labelling controls</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/tutorials/forms/grouping/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guidelines on grouping controls</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-6-headings-and-labels/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.4.6</a
+            >
+            <span>Level AA</span>
+          </div>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-2-labels-or-instructions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.2</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Instructions</h2>
+          <ul>
+            <li>
+              Ensure form control have instructions in case they require
+              specific format or other instructions
+            </li>
+            <li>Ensure the instruction is clear and concise</li>
+            <li>
+              Ensure the instructions are in close immediate proximity to the
+              control, logically above the control as part of the label or below
+              the label
+            </li>
+            <li>
+              Ensure required fields are clearly marked as required, e.g. with *
+              asterisk
+              <ul>
+                <li>
+                  alternatively, can mark optional fields using '(optional)' in
+                  the label
+                </li>
+                <li>
+                  in any case, provide instructions in the beginning of the
+                  form, e.g. 'Fields marked with * asterisk are required'
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/tutorials/forms/instructions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guidelines on form instructions</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-2-labels-or-instructions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.2</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Redundant data entry</h2>
+          <p>
+            Ensure people don't have to enter the same information twice in the
+            same session, unless it is essential for security
+          </p>
+          <p><strong>Example of solutions:</strong></p>
+          <ul>
+            <li>Data can be auto-populated or available for selection</li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-7-redundant-entry/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.7</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Error prevention</h2>
+          <p>
+            Allow people to confirm, correct, or reverse important submissions.
+            An important action is an online task that could have serious
+            consequences.
+          </p>
+          <p><strong>Examples:</strong></p>
+          <ul>
+            <li>legal contracts</li>
+            <li>financial transactions</li>
+            <li>user account</li>
+          </ul>
+          <p><strong>Examples of solutions:</strong></p>
+          <ul>
+            <li>allow to review summary before submission</li>
+            <li>add a required checkbox to confirm submission</li>
+            <li>show confirmation popup before submission</li>
+            <li>give time to cancel or edit after submission</li>
+            <li>allow data recovery after submission</li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-4-error-prevention-legal-financial-data/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.4</a
+            >
+            <span>Level AA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Error messages</h2>
+          <ul>
+            <li>Show error messages after form validation</li>
+            <li>
+              Clearly identify the problem in the error message, e.g. which form
+              field has the error and what is the problem
+            </li>
+            <li>
+              Don't use color alone to identify the erroneous fields. Add
+              graphics and optionally the error message
+            </li>
+            <li>
+              If you show error messages next to the erroneous field,
+              <a
+                href="https://adrianroselli.com/2017/01/avoid-messages-under-fields.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >avoid messages under the field</a
+              >
+            </li>
+            <li>If there are multiple errors, list them all above the form</li>
+            <li>
+              <a
+                href="https://adamsilver.io/blog/the-problem-with-live-validation-and-what-to-do-instead/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Avoid live field validation during typing</a
+              >, unless necessary
+            </li>
+          </ul>
+          <p><strong>Suggested solutions:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://design-system.service.gov.uk/components/error-summary/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Error summary pattern</a
+              >
+              (gov.uk)
+            </li>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/tutorials/forms/notifications/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >User notification approaches</a
+              >
+              (W3)
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <span>SC 3.3.1</span>
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Error suggestions</h2>
+          <p>
+            Error messages should include concise and helpful suggestion on how
+            to correct the issue
+          </p>
+          <ul>
+            <li>including empty required fields</li>
+          </ul>
+          <p><strong>Bad and good examples:</strong></p>
+          <ul>
+            <li>'Invalid field' vs 'Enter address'</li>
+            <li>'Invalid format' vs 'Enter a valid 5-digit zip code'</li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-3-error-suggestion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.3</a
+            >
+            <span>Level AA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Session timeout</h2>
+          <ul>
+            <li>Avoid setting time limits to form completion</li>
+            <li>
+              If time limits are used, allow people to turn them off, adjust
+              them, or extend them
+            </li>
+          </ul>
+          <p><strong>Exceptions:</strong></p>
+          <ul>
+            <li>
+              Services where a time limit is essential for the activity, e.g.
+              live events, auctions, exams
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-2-1-timing-adjustable/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.2.1</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Authentication</h2>
+          <ul>
+            <li>
+              Ensure the login to the service do not rely on memory alone (e.g.
+              memorizing password) or other cognitive challenge (e.g. solving a
+              puzzle).
+            </li>
+            <li>
+              Allow people to always see what they type, e.g. an option to
+              show/hide password
+            </li>
+          </ul>
+          <p><strong>Example of solutions:</strong></p>
+          <ul>
+            <li>
+              login fields have the autocomplete attribute that allow password
+              managers to save and repopulate the data
+            </li>
+            <li>
+              allow copy-paste credentials from third-party password managers
+            </li>
+            <li>
+              allow two-factor authentication, e.g. email verification,
+              authenticator code
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/3-3-8-accessible-authentication-minimum/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 3.3.8</a
+            >
+            <span>Level AA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Color contrast</h2>
+          <ul>
+            <li>
+              Ensure form controls - e.g. input field boundaries - have a
+              contrast ratio of at least <strong>3:1</strong> against adjacent
+              colors
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://webaim.org/resources/contrastchecker/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WebAIM Contrast Checker</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/1-4-11-non-text-contrast/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 1.4.11</a
+            >
+            <span>Level AA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Submit button</h2>
+          <ul>
+            <li>
+              <a
+                href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Avoid disabling the submit button</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge recommendation">
+            <span>Recommendation</span>
+          </div>
+        </article>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="structure.html" class="page-nav-prev"
+            >← Previous: Structure</a
+          >
+          <a href="images.html" class="page-nav-next">Next: Images →</a>
+        </nav>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2026. Thanks for considering accessibility ♥️</p>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+  </body>
 </html>

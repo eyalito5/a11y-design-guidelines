@@ -1,127 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Video and audio accessibility guidelines - WCAG 2.2 AA">
-  <title>Video & Audio - Accessibility Guidelines for Designers</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Video and audio accessibility guidelines - WCAG 2.2 AA"
+    />
+    <title>Video & Audio - Accessibility Guidelines for Designers</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>
-<body>
-  <div id="skip-to-content">
-    <a href="#main-content">Skip to main content</a>
-  </div>
-  
-  <header>
-    <div class="header-container">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
-          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
-        </div>
-        <span class="site-title">Accessibility Guidelines for Designers</span>
-      </div>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="skip-to-content">
+      <a href="#main-content">Skip to main content</a>
     </div>
-  </header>
-  
-  <div class="layout-wrapper">
-    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
 
-      <ul class="nav-list">
-        <li><a href="../index.html">Intro</a></li>
-        <li><a href="color-contrast.html">Color & Contrast</a></li>
-        <li><a href="typography.html">Typography</a></li>
-        <li><a href="structure.html">Structure</a></li>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="images.html">Images</a></li>
-        <li><a href="video-audio.html" aria-current="page">Video & Audio</a></li>
-        <li><a href="animations.html">Animations</a></li>
-        <li><a href="navigation-interaction.html">Navigation & Interaction</a></li>
-        <li><a href="patterns.html">Patterns to avoid</a></li>
-      </ul>
-    </nav>
-    
-    <main id="main-content" class="main-content">
-      <h1>Video & Audio</h1>
-      
-      <article class="content-section">
-        <h2>Captions</h2>
-        <ul>
-          <li>Ensure all videos have captions for dialogue and important sounds</li>
-          <li>Captions must be synchronized with the audio</li>
-          <li>Include sound descriptions for important non-dialogue audio (e.g., "[car engine roaring]")</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/media/av/" target="_blank" rel="noopener noreferrer">W3 guide on accessible multimedia</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-2-1-audio-only-and-video-only-prerecorded/" target="_blank" rel="noopener noreferrer">SC 1.2.1</a>
-          <span>Level A</span>
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <div class="brand-logo">
+            <img
+              src="../images/vincit-mark.png"
+              class="site-logo site-logo--mark"
+              alt="Vincit mark"
+            />
+            <img
+              src="../images/vincit-logo.svg"
+              class="site-logo site-logo--logo"
+              alt="Vincit logo"
+            />
+          </div>
+          <span class="site-title">Accessibility Guidelines for Designers</span>
         </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Audio description</h2>
-        <ul>
-          <li>Ensure videos have audio descriptions of important visual information</li>
-          <li>Audio descriptions should describe actions, characters, scene changes, and other important visuals</li>
-          <li>Provide either integrated descriptions or a separate audio track</li>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="layout-wrapper">
+      <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Intro</a></li>
+          <li><a href="color-contrast.html">Color & Contrast</a></li>
+          <li><a href="typography.html">Typography</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li>
+            <a href="video-audio.html" aria-current="page">Video & Audio</a>
+          </li>
+          <li><a href="animations.html">Animations</a></li>
+          <li>
+            <a href="navigation-interaction.html">Navigation & Interaction</a>
+          </li>
+          <li><a href="patterns.html">Patterns to avoid</a></li>
         </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/1-2-3-audio-description-or-media-alternative-prerecorded/" target="_blank" rel="noopener noreferrer">SC 1.2.3</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Transcript</h2>
-        <ul>
-          <li>Provide transcripts for audio and video content</li>
-          <li>Transcripts should include dialogue and important sound descriptions</li>
-          <li>Place transcripts near the media player or provide a link</li>
-        </ul>
-        <div class="wcag-badge recommendation">
-          <span>Recommendation</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Media controls</h2>
-        <ul>
-          <li>Ensure media players have keyboard accessible controls</li>
-          <li>Provide pause/play, volume, and caption toggle controls</li>
-          <li>All controls should be operable via keyboard</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-1-1-keyboard/" target="_blank" rel="noopener noreferrer">SC 2.1.1</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <nav class="page-nav" aria-label="Page navigation">
-        <a href="images.html" class="page-nav-prev">← Previous: Images</a>
-        <a href="animations.html" class="page-nav-next">Next: Animations →</a>
       </nav>
-    </main>
-  </div>
-  
-  <footer>
-    <p>© 2026 Made with ♥️ to accessibility</p>
-  </footer>
-  
-  <script src="../js/navigation.js"></script>
-</body>
+
+      <main id="main-content" class="main-content">
+        <h1>Video & Audio</h1>
+
+        <article class="content-section">
+          <h2>Captions</h2>
+          <ul>
+            <li>
+              Ensure all videos have captions for dialogue and important sounds
+            </li>
+            <li>Captions must be synchronized with the audio</li>
+            <li>
+              Include sound descriptions for important non-dialogue audio (e.g.,
+              "[car engine roaring]")
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/media/av/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on accessible multimedia</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/1-2-1-audio-only-and-video-only-prerecorded/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 1.2.1</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Audio description</h2>
+          <ul>
+            <li>
+              Ensure videos have audio descriptions of important visual
+              information
+            </li>
+            <li>
+              Audio descriptions should describe actions, characters, scene
+              changes, and other important visuals
+            </li>
+            <li>
+              Provide either integrated descriptions or a separate audio track
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/1-2-3-audio-description-or-media-alternative-prerecorded/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 1.2.3</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Transcript</h2>
+          <ul>
+            <li>Provide transcripts for audio and video content</li>
+            <li>
+              Transcripts should include dialogue and important sound
+              descriptions
+            </li>
+            <li>Place transcripts near the media player or provide a link</li>
+          </ul>
+          <div class="wcag-badge recommendation">
+            <span>Recommendation</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Media controls</h2>
+          <ul>
+            <li>Ensure media players have keyboard accessible controls</li>
+            <li>Provide pause/play, volume, and caption toggle controls</li>
+            <li>All controls should be operable via keyboard</li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-1-1-keyboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.1.1</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="images.html" class="page-nav-prev">← Previous: Images</a>
+          <a href="animations.html" class="page-nav-next">Next: Animations →</a>
+        </nav>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2026. Thanks for considering accessibility ♥️</p>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+  </body>
 </html>

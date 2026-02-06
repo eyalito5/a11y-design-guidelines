@@ -1,8 +1,3 @@
-/* ===================================
-   ACCESSIBILITY GUIDELINES WEBSITE
-   WCAG 2.2 AA Compliant
-   =================================== */
-
 :root {
   /* Colors */
   --bg-primary: #fbfbf6;
@@ -12,21 +7,21 @@
   --accent-green: #388641;
   --accent-blue: #2c69d2;
   --border-light: #ebebeb;
-  
+
   /* Typography - Studio Feixen Vincit */
   --font-display: "Studio Feixen Vincit Display", sans-serif;
   --font-regular: "Studio Feixen Vincit", sans-serif;
   --font-bold: "Studio Feixen Vincit Bold", "Studio Feixen Vincit", sans-serif;
-  
+
   --font-size-heading: 32px;
   --font-size-subheading: 24px;
   --font-size-body: 16px;
   --font-size-small: 14px;
-  
+
   --line-height-tight: 1;
   --line-height-body: 1.5;
   --line-height-small: 1.5;
-  
+
   /* Spacing */
   --spacing-xs: 5px;
   --spacing-sm: 10px;
@@ -34,16 +29,21 @@
   --spacing-lg: 30px;
   --spacing-xl: 40px;
   --spacing-2xl: 50px;
-  
+
   /* Border Radius */
   --border-radius: 8px;
   --border-radius-pill: 999px;
-  
+
+  /* Box shadow */
+  --box-shadow-content:
+    0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+  --box-shadow-header: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
   /* Container */
   --container-max-width: 1200px;
   --main-content-width: 700px;
   --sidebar-width: 300px;
-  
+
   /* Z-index */
   --z-nav: 1000;
   --z-mobile-menu: 999;
@@ -51,30 +51,42 @@
 
 /* Vincit font-face definitions */
 @font-face {
-  font-family: 'Studio Feixen Vincit';
-  src: url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2') format('woff2'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff') format('woff'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf') format('truetype');
+  font-family: "Studio Feixen Vincit";
+  src:
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2")
+      format("woff2"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff")
+      format("woff"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf")
+      format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Studio Feixen Vincit';
-  src: url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2') format('woff2'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff') format('woff'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf') format('truetype');
+  font-family: "Studio Feixen Vincit Bold";
+  src:
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2")
+      format("woff2"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff")
+      format("woff"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf")
+      format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Studio Feixen Vincit Display';
-  src: url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2') format('woff2'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff') format('woff'),
-       url('https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf') format('truetype');
+  font-family: "Studio Feixen Vincit Display";
+  src:
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2")
+      format("woff2"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff")
+      format("woff"),
+    url("https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf")
+      format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -101,8 +113,10 @@ body {
   background-color: var(--bg-primary);
 }
 
-/* Skip to main content link for accessibility */
-#skip-to-content a{
+/* ===================================
+   Skip to content link
+   =================================== */
+#skip-to-content a {
   position: absolute;
   top: -50px;
   left: 0;
@@ -119,8 +133,8 @@ body {
   top: var(--spacing-sm);
   left: var(--spacing-sm);
   outline: 2px solid var(--accent-blue);
-  outline-offset: 2px;  
-transition: top 0.1s ease-in;   
+  outline-offset: 2px;
+  transition: top 0.1s ease-in;
 }
 
 /* ===================================
@@ -129,7 +143,7 @@ transition: top 0.1s ease-in;
 
 header {
   background-color: var(--bg-white);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-header);
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -154,8 +168,6 @@ header.hide-header {
   font-size: var(--font-size-heading);
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--text-primary);
-  text-decoration: none;
 }
 
 /* Brand (logo + title) */
@@ -166,99 +178,58 @@ header.hide-header {
   color: inherit;
 }
 
-
 .site-logo {
   display: inline-block;
   height: auto;
 }
 
-/* Mobile: show mark, hide full logo */
-.site-logo--mark {
-  display: inline-block;
-  width: 44px;
-}
-.site-logo--logo {
-  display: none;
-  width: 140px;
-}
-
-@media (min-width: 768px) {
-    .brand-logo {
+.brand-logo {
   width: var(--sidebar-width);
 }
-  .site-logo--logo {
-    display: inline-block;
-  }
+.site-logo--logo {
+  display: inline-block;
+  width: 120px;
+}
 
-  .site-logo--mark {
-    display: none;
-  }
+.site-logo--mark {
+  display: none;
 }
 
 /* Main Navigation - Desktop */
-.nav-main {
-  display: none;
-}
 
-@media (min-width: 768px) {
-  .nav-main {
-    display: block;
-  }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-  
-  .nav-list a {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 500;
-    padding: var(--spacing-sm);
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .nav-list a:hover,
-  .nav-list a:focus {
-    background-color: var(--accent-yellow);
-    outline: 2px solid var(--accent-blue);
-  }
-  
-  .nav-list a[aria-current="page"] {
-    background-color: var(--accent-blue);
-    color: white;
-  }
-}
-
-/* Mobile Navigation Button */
-.nav-toggle {
+.nav-list {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: 2px solid var(--text-primary);
-  cursor: pointer;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-left: 0;
+}
+
+.nav-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
   padding: var(--spacing-sm);
   border-radius: var(--border-radius);
-  font-size: 1.5rem;
-  min-width: 44px;
-  min-height: 44px;
-  transition: all 0.3s ease;
+  display: block;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.nav-toggle:hover,
-.nav-toggle:focus {
+.nav-list a:hover,
+.nav-list a:focus {
   background-color: var(--accent-yellow);
   outline: 2px solid var(--accent-blue);
 }
 
-@media (min-width: 768px) {
-  .nav-toggle {
-    display: none;
-  }
+.nav-list a[aria-current="page"] {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
 }
 
 /* Mobile Navigation Menu */
@@ -281,34 +252,6 @@ header.hide-header {
   left: 0;
 }
 
-.nav-mobile .nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.nav-mobile .nav-list a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: 500;
-  padding: var(--spacing-sm);
-  border-radius: var(--border-radius);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block;
-}
-
-.nav-mobile .nav-list a:hover,
-.nav-mobile .nav-list a:focus {
-  background-color: var(--accent-yellow);
-  outline: 2px solid var(--accent-blue);
-}
-
-.nav-mobile .nav-list a[aria-current="page"] {
-  background-color: var(--accent-blue);
-  color: white;
-}
-
 @media (min-width: 768px) {
   .nav-mobile {
     display: block;
@@ -318,14 +261,6 @@ header.hide-header {
     background-color: transparent;
     padding: var(--spacing-lg) var(--spacing-md);
     width: var(--sidebar-width);
-  }
-  
-  .nav-mobile.open {
-    left: 0;
-  }
-  
-  .nav-mobile-close {
-    display: none;
   }
 }
 
@@ -340,25 +275,8 @@ header.hide-header {
   align-items: flex-start;
 }
 
-.sidebar {
-  width: 100%;
-  padding: var(--spacing-xl);
-}
-
-@media (min-width: 768px) {
-  .sidebar {
-    width: var(--sidebar-width);
-    border-right: 1px solid var(--border-light);
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: var(--spacing-xl);
-  }
-}
-
 .main-content {
-  width: 100%;
+  flex: 1;
   padding: var(--spacing-xl);
 }
 
@@ -378,8 +296,8 @@ h1 {
 h2 {
   font-size: var(--font-size-subheading);
   font-weight: 400;
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
   line-height: var(--line-height-tight);
 }
 
@@ -395,7 +313,8 @@ p {
   line-height: var(--line-height-body);
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: var(--spacing-lg);
   margin-bottom: var(--spacing-md);
 }
@@ -411,7 +330,7 @@ li {
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   border-radius: var(--border-radius);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--box-shadow-content);
 }
 
 /* ===================================
@@ -429,7 +348,7 @@ li {
   margin-top: var(--spacing-md);
   background-color: var(--accent-yellow);
   color: var(--text-primary);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--box-shadow-content);
 }
 
 .wcag-badge.recommendation {
@@ -492,7 +411,9 @@ a:focus {
   text-decoration: none;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   min-height: 44px;
   font-weight: 500;
 }
@@ -546,44 +467,79 @@ footer a:focus {
    =================================== */
 
 @media (max-width: 767px) {
+  /* Mobile Navigation Button */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 2px solid var(--text-primary);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle:hover,
+  .nav-toggle:focus {
+    background-color: var(--accent-yellow);
+    outline: 2px solid var(--accent-blue);
+  }
+  .nav-list {
+    gap: var(--spacing-xs);
+  }
+  .site-logo--mark {
+    display: inline-block;
+    width: 44px;
+  }
+  .brand {
+    gap: var(--spacing-sm);
+  }
+  .brand-logo {
+    width: auto;
+  }
+  .site-logo--logo {
+    display: none;
+  }
   .layout-wrapper {
     flex-direction: column;
   }
 
-  .brand{
-    gap: var(--spacing-sm);
-  }
-  
   .sidebar {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border-light);
   }
-  
+
   .main-content {
     width: 100%;
+    padding: var(--spacing-md);
   }
-  
+
   .header-container {
     padding: var(--spacing-md);
   }
-  
+
   .site-title {
     font-size: 1rem;
   }
-  
+
   h1 {
     font-size: 1.75rem;
+    margin-top: var(--spacing-sm);
   }
-  
+
   .page-nav {
     flex-direction: column;
   }
-  
+
   .page-nav a {
     width: 100%;
   }
-  
+
   .page-nav-prev,
   .page-nav-next {
     margin: 0;
@@ -610,7 +566,7 @@ a:focus-visible {
   .page-nav {
     display: none;
   }
-  
+
   body {
     background-color: white;
   }
