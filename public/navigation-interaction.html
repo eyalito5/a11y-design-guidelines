@@ -1,190 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Navigation and interaction accessibility guidelines - WCAG 2.2 AA">
-  <title>Navigation & Interaction - Accessibility Guidelines for Designers</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Navigation and interaction accessibility guidelines - WCAG 2.2 AA"
+    />
+    <title>
+      Navigation & Interaction - Accessibility Guidelines for Designers
+    </title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>
-<body>
-  <div id="skip-to-content">
-    <a href="#main-content">Skip to main content</a>
-  </div>
-  
-  <header>
-    <div class="header-container">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="../images/vincit-mark.png" class="site-logo site-logo--mark" alt="Vincit mark">
-          <img src="../images/vincit-logo.svg" class="site-logo site-logo--logo" alt="Vincit logo">
-        </div>
-        <span class="site-title">Accessibility Guidelines for Designers</span>
-      </div>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://www.vincit.com/hubfs/vincit-hubspot-theme-2023/fonts/StudioFeixenVincit-Display.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="skip-to-content">
+      <a href="#main-content">Skip to main content</a>
     </div>
-  </header>
-  
-  <div class="layout-wrapper">
-    <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
 
-      <ul class="nav-list">
-        <li><a href="../index.html">Intro</a></li>
-        <li><a href="color-contrast.html">Color & Contrast</a></li>
-        <li><a href="typography.html">Typography</a></li>
-        <li><a href="structure.html">Structure</a></li>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="images.html">Images</a></li>
-        <li><a href="video-audio.html">Video & Audio</a></li>
-        <li><a href="animations.html">Animations</a></li>
-        <li><a href="navigation-interaction.html" aria-current="page">Navigation & Interaction</a></li>
-        <li><a href="patterns.html">Patterns to avoid</a></li>
-      </ul>
-    </nav>
-    
-    <main id="main-content" class="main-content">
-      <h1>Navigation & Interaction</h1>
-      
-      <article class="content-section">
-        <h2>Keyboard access</h2>
-        <ul>
-          <li>All functionality must be accessible via keyboard</li>
-          <li>No keyboard trap - users must be able to navigate away from any element using keyboard alone</li>
-          <li>Provide keyboard shortcuts for common actions</li>
-          <li>Make sure Tab key order is logical and follows the visual order</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard" target="_blank" rel="noopener noreferrer">W3 guide on keyboard accessibility</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-1-1-keyboard/" target="_blank" rel="noopener noreferrer">SC 2.1.1</a>
-          <span>Level A</span>
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <div class="brand-logo">
+            <img
+              src="../images/vincit-mark.png"
+              class="site-logo site-logo--mark"
+              alt="Vincit mark"
+            />
+            <img
+              src="../images/vincit-logo.svg"
+              class="site-logo site-logo--logo"
+              alt="Vincit logo"
+            />
+          </div>
+          <span class="site-title">Accessibility Guidelines for Designers</span>
         </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Focus visible</h2>
-        <ul>
-          <li>Ensure keyboard focus is always visible</li>
-          <li>Do not remove the default outline style using CSS unless replacing it with another clear indicator</li>
-          <li>Focus indicator must have a contrast ratio of at least 3:1 against adjacent colors</li>
-          <li>The focus indicator area should be at least 3px</li>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="layout-wrapper">
+      <nav id="nav-mobile" class="nav-mobile" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Intro</a></li>
+          <li><a href="color-contrast.html">Color & Contrast</a></li>
+          <li><a href="typography.html">Typography</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li><a href="video-audio.html">Video & Audio</a></li>
+          <li><a href="animations.html">Animations</a></li>
+          <li>
+            <a href="navigation-interaction.html" aria-current="page"
+              >Navigation & Interaction</a
+            >
+          </li>
+          <li><a href="patterns.html">Patterns to avoid</a></li>
         </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible" target="_blank" rel="noopener noreferrer">W3 guide on focus visible</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-7-focus-visible/" target="_blank" rel="noopener noreferrer">SC 2.4.7</a>
-          <span>Level AA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Focus order</h2>
-        <ul>
-          <li>The focus order should match the visual reading order</li>
-          <li>Use HTML semantic structure to determine focus order</li>
-          <li>Avoid using positive tabindex values as it breaks the logical tab order</li>
-          <li>Test with keyboard navigation to ensure the tab order is logical</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-3-focus-order/" target="_blank" rel="noopener noreferrer">SC 2.4.3</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Target size</h2>
-        <ul>
-          <li>Interactive elements should be at least 44 by 44 CSS pixels in size</li>
-          <li>This includes buttons, links, and form controls</li>
-          <li>Provides better usability for users with motor control difficulties and touch device users</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" target="_blank" rel="noopener noreferrer">W3 guide on target size</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-5-5-target-size/" target="_blank" rel="noopener noreferrer">SC 2.5.5</a>
-          <span>Level AAA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Link purpose</h2>
-        <ul>
-          <li>The purpose of every link must be clear from the link text alone or from the surrounding context</li>
-          <li>Avoid generic link text like "click here" or "more"</li>
-          <li>Use descriptive link text that indicates where the link goes</li>
-          <li>For icon-only links, provide an <code>aria-label</code></li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only" target="_blank" rel="noopener noreferrer">W3 guide on link purpose</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-9-link-purpose-link-only/" target="_blank" rel="noopener noreferrer">SC 2.4.9</a>
-          <span>Level AAA</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Gesture and motion</h2>
-        <ul>
-          <li>Do not rely solely on gestures for functionality</li>
-          <li>Provide alternatives to gesture-based controls</li>
-          <li>Ensure that device orientation is not required - provide both portrait and landscape modes</li>
-          <li>Avoid triggering actions on device tilt or shake</li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/2-5-1-pointer-gestures/" target="_blank" rel="noopener noreferrer">SC 2.5.1</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <article class="content-section">
-        <h2>Name, role, and state</h2>
-        <ul>
-          <li>All user interface components must have a name that describes their purpose</li>
-          <li>The role of each component must be clear (button, link, checkbox, etc.)</li>
-          <li>The state of interactive components must be programmatically determinable</li>
-          <li>Use semantic HTML and ARIA attributes to provide this information</li>
-        </ul>
-        <p><strong>Additional resources:</strong></p>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value" target="_blank" rel="noopener noreferrer">W3 guide on name, role, and state</a></li>
-        </ul>
-        <div class="wcag-badge">
-          <a href="https://aaardvarkaccessibility.com/wcag-plain-english/4-1-2-name-role-value/" target="_blank" rel="noopener noreferrer">SC 4.1.2</a>
-          <span>Level A</span>
-        </div>
-      </article>
-      
-      <nav class="page-nav" aria-label="Page navigation">
-        <a href="animations.html" class="page-nav-prev">← Previous: Animations</a>
-        <a href="patterns.html" class="page-nav-next">Next: Patterns to avoid 
-          →</a>
       </nav>
-    </main>
-  </div>
-  
-  <footer>
-    <p>© 2026 Made with ♥️ to accessibility</p>
-  </footer>
-  
-  <script src="../js/navigation.js"></script>
-</body>
+
+      <main id="main-content" class="main-content">
+        <h1>Navigation & Interaction</h1>
+
+        <article class="content-section">
+          <h2>Keyboard access</h2>
+          <ul>
+            <li>All functionality must be accessible via keyboard</li>
+            <li>
+              No keyboard trap - users must be able to navigate away from any
+              element using keyboard alone
+            </li>
+            <li>Provide keyboard shortcuts for common actions</li>
+            <li>
+              Make sure Tab key order is logical and follows the visual order
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on keyboard accessibility</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-1-1-keyboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.1.1</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Focus visible</h2>
+          <ul>
+            <li>Ensure keyboard focus is always visible</li>
+            <li>
+              Do not remove the default outline style using CSS unless replacing
+              it with another clear indicator
+            </li>
+            <li>
+              Focus indicator must have a contrast ratio of at least 3:1 against
+              adjacent colors
+            </li>
+            <li>The focus indicator area should be at least 3px</li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on focus visible</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-7-focus-visible/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.4.7</a
+            >
+            <span>Level AA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Focus order</h2>
+          <ul>
+            <li>The focus order should match the visual reading order</li>
+            <li>Use HTML semantic structure to determine focus order</li>
+            <li>
+              Avoid using positive tabindex values as it breaks the logical tab
+              order
+            </li>
+            <li>
+              Test with keyboard navigation to ensure the tab order is logical
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-3-focus-order/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.4.3</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Target size</h2>
+          <ul>
+            <li>
+              Interactive elements should be at least 44 by 44 CSS pixels in
+              size
+            </li>
+            <li>This includes buttons, links, and form controls</li>
+            <li>
+              Provides better usability for users with motor control
+              difficulties and touch device users
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on target size</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-5-5-target-size/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.5.5</a
+            >
+            <span>Level AAA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Link purpose</h2>
+          <ul>
+            <li>
+              The purpose of every link must be clear from the link text alone
+              or from the surrounding context
+            </li>
+            <li>Avoid generic link text like "click here" or "more"</li>
+            <li>
+              Use descriptive link text that indicates where the link goes
+            </li>
+            <li>For icon-only links, provide an <code>aria-label</code></li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on link purpose</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-4-9-link-purpose-link-only/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.4.9</a
+            >
+            <span>Level AAA</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Gesture and motion</h2>
+          <ul>
+            <li>Do not rely solely on gestures for functionality</li>
+            <li>Provide alternatives to gesture-based controls</li>
+            <li>
+              Ensure that device orientation is not required - provide both
+              portrait and landscape modes
+            </li>
+            <li>Avoid triggering actions on device tilt or shake</li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/2-5-1-pointer-gestures/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 2.5.1</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <article class="content-section">
+          <h2>Name, role, and state</h2>
+          <ul>
+            <li>
+              All user interface components must have a name that describes
+              their purpose
+            </li>
+            <li>
+              The role of each component must be clear (button, link, checkbox,
+              etc.)
+            </li>
+            <li>
+              The state of interactive components must be programmatically
+              determinable
+            </li>
+            <li>
+              Use semantic HTML and ARIA attributes to provide this information
+            </li>
+          </ul>
+          <p><strong>Additional resources:</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+                target="_blank"
+                rel="noopener noreferrer"
+                >W3 guide on name, role, and state</a
+              >
+            </li>
+          </ul>
+          <div class="wcag-badge">
+            <a
+              href="https://aaardvarkaccessibility.com/wcag-plain-english/4-1-2-name-role-value/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SC 4.1.2</a
+            >
+            <span>Level A</span>
+          </div>
+        </article>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="animations.html" class="page-nav-prev"
+            >← Previous: Animations</a
+          >
+          <a href="patterns.html" class="page-nav-next"
+            >Next: Patterns to avoid →</a
+          >
+        </nav>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2026. Thanks for considering accessibility ♥️</p>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+  </body>
 </html>
